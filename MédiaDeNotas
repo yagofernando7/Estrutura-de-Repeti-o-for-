@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class Exercicio5 {
+        public static void main(String[] args){
+
+            Scanner scanner = new Scanner(System.in);
+            double aprovado = 0;
+            double reprovado = 0;
+            double recuperacao = 0;
+            double mediaDaClasse = 0;
+
+           
+
+
+            for(int contador = 0; contador <= 6; contador++){
+
+
+                System.out.println("Digite a nota da prova A1:");
+                double a1 = scanner.nextInt();
+
+                System.out.println("Digite a nota da prova A2:");
+                double a2= scanner.nextInt();
+
+                double media = (a1 + a2) / 2;
+
+                System.out.println("Sua média é: " + media);
+                mediaDaClasse += media;
+
+                
+                
+                if (media >= 7){
+                    System.out.println("Aprovado!");
+                    aprovado++;
+                }
+                else if (media <7 && media >= 5){
+                    System.out.println( "Recuperação!");
+                    recuperacao++;
+
+                }
+                else{
+                    System.out.println("Reprovaddo!");
+                    reprovado++;
+
+                }
+
+        }
+        
+
+    
+        System.out.println(aprovado + " Foram aprovados!");
+        System.out.println(reprovado + " Foram reprovado!");
+        System.out.println(recuperacao + " Estão de recuperação!");
+        System.out.println( "A média da classe é: " + (mediaDaClasse / 7));
+
+    }
+}
